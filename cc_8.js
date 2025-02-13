@@ -15,6 +15,23 @@ function calculateDiscount(price, discountRate) {
 console.log(calculateDiscount(100, 0.2)); // Expected output: "Final Price: $80.00"
 calculateDiscount(250, 0.15); // Expected output: "Final Price: $212.50"
 
+// Task 4 - Car Rental Cost Calculation
+function calculateRentalCost(days, carType, insurance = false) {
+    const subscriptionLevel = {
+        "Economy": 40,
+        "Standard": 60,
+        "Luxury": 100
+    };
+    const insuranceCost = insurance ? 20 : 0;
+
+    let totalCost = (subscriptionLevel[carType] * days) + insuranceCost;
+    
+    return `Total Rental Cost: $${totalCost}`;
+};
+console.log(calculateRentalCost(3, "Economy", true)); // Expected output: "Total Rental Cost: $180"
+console.log(calculateRentalCost(5, "Luxury", false)); // Expected output: "Total Rental Cost: $500"
+
+
 // Task 5- Loan Payment Calculation
 function calculateLoanPayment(principal, rate, time) {
     totalPayment = principal + (principal * rate * time);// Calculates loan payment

@@ -15,3 +15,11 @@ function calculateDiscount(price, discountRate) {
 console.log(calculateDiscount(100, 0.2)); // Expected output: "Final Price: $80.00"
 calculateDiscount(250, 0.15); // Expected output: "Final Price: $212.50"
 
+// Task 5- Loan Payment Calculation
+function calculateLoanPayment(principal, rate, time) {
+    totalPayment = principal + (principal * rate * time);// Calculates loan payment
+
+    return `Total Payment: $${totalPayment.toFixed(2)}`
+};
+console.log(calculateLoanPayment(1000, 0.05, 2)); // Expected output: "Total Payment: $1100.00"
+console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Payment: $6050.00"

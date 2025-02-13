@@ -23,3 +23,17 @@ function calculateLoanPayment(principal, rate, time) {
 };
 console.log(calculateLoanPayment(1000, 0.05, 2)); // Expected output: "Total Payment: $1100.00"
 console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Payment: $6050.00"
+
+// Task 7 - Shopping Cart Tracker
+function createCartTracker(params) {
+    let cartValue = 0;// Sets up empty cart value
+
+
+    return function (price) {
+        cartValue += price;// Adds the total from the cart variable
+        return `Total Cart Value: $${cartValue}`;
+    }
+};
+let cart = createCartTracker();// Sets up
+console.log(cart(20)); // Expected output: "Total Cart Value: $20"
+console.log(cart(35)); // Expected output: "Total Cart Value: $55"

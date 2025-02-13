@@ -21,10 +21,10 @@ function calculateRentalCost(days, carType, insurance = false) {
         "Economy": 40,
         "Standard": 60,
         "Luxury": 100
-    };
-    const insuranceCost = insurance ? 20 : 0;
+    };// Outlines the subscription level
+    const insuranceCost = insurance ? 20 : 0;// Checks for insurnace to be added to totalCost
 
-    let totalCost = (subscriptionLevel[carType] * days) + insuranceCost;
+    let totalCost = (subscriptionLevel[carType] * days) + insuranceCost;// Calculates the total cost for rental
     
     return `Total Rental Cost: $${totalCost}`;
 };
@@ -40,6 +40,8 @@ function calculateLoanPayment(principal, rate, time) {
 };
 console.log(calculateLoanPayment(1000, 0.05, 2)); // Expected output: "Total Payment: $1100.00"
 console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Payment: $6050.00"
+
+
 
 // Task 7 - Shopping Cart Tracker
 function createCartTracker(params) {

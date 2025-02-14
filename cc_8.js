@@ -45,10 +45,10 @@ console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Pay
 let transactions = [200, 1500, 3200, 800, 2500];
 
 function filterLargeTransactions(transactions, filterFunction) {
-    let filterTransactions = transactions.filter(filterFunction)
-    console.log(`Filtered Transactions: ${filterTransactions}`);
+    let filterTransactions = transactions.filter(filterFunction)// Calls the transaction and filterFunction parameters to filter 
+    console.log(`Filtered Transactions: ${filterTransactions}`);// Expected output: [1500, 3200, 2500]
 };
-filterLargeTransactions(transactions, amount => amount > 1000);// Expected output: [1500, 3200, 2500]
+filterLargeTransactions(transactions, amount => amount > 1000);// Filters out the transactions from the transactions array and returns the ones above 1000
 
 
 // Task 7 - Shopping Cart Tracker

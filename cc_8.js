@@ -75,3 +75,16 @@ function createCartTracker(params) {
 let cart = createCartTracker();// Sets up
 console.log(cart(20)); // Expected output: "Total Cart Value: $20"
 console.log(cart(35)); // Expected output: "Total Cart Value: $55"
+
+// Task 8 - Savings Growth Projection
+function calculateSavings(years, amount) {
+    if (years >= 10) {
+        return amount;// If the year past 10, it will return the amount at year 10
+        
+    };
+    const interestRate = 0.05;
+    const savingsAmount = amount * (1 + interestRate)
+    return calculateSavings(years + 1, savingsAmount, interestRate);
+};
+console.log(`Projected Savings: $${calculateSavings(8, 1000).toFixed(2)}`);// Expected output: "Projected Savings: $1102.50"
+console.log(`Projected Savings: $${calculateSavings(5, 5000).toFixed(2)}`); // Expected output: "Projected Savings: $6381.41"
